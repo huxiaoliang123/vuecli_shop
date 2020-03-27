@@ -1,7 +1,7 @@
 <template>
   <div class="login_wrap">
     <div class="login_box">
-      <h1 class="title">电商管理后台eShop</h1>
+      <h1 class="title">eShop电商后台管理系统</h1>
       <div class="avatar_box">
         <img src="../../assets/logo.png">
       </div>

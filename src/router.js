@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Users from './components/users.vue'
 import Rights from './components/rights.vue'
 import Goods from './components/goods.vue'
 import Orders from './components/orders.vue'
@@ -8,6 +7,8 @@ import Settings from './components/settings.vue'
 import UserInfo from './components/userinfo.vue'
 import Login from './components/login/login.vue'
 import Home from './components/home.vue'
+import Welcome from './components/welcome.vue'
+import Users from './components/user/users.vue'
 
 Vue.use(VueRouter)
 
@@ -22,11 +23,12 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
-  },
-  {
-    path: '/users',
-    component: Users
+    component: Home,
+    redirect: '/welcome',
+    children: [
+      { path: '/welcome', component: Welcome },
+      { path: '/users', component: Users }
+    ]
   },
   {
     path: '/rights',
