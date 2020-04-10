@@ -45,7 +45,7 @@
           <el-table-column type="index" label="#"></el-table-column>
           <el-table-column prop="roleName" label="角色名称"></el-table-column>
           <el-table-column prop="roleDesc" label="角色描述"></el-table-column>
-          <el-table-column width="290px">
+          <el-table-column width="290px" label="操作">
             <template slot-scope="scope">
               <el-button type="primary" icon="el-icon-edit" size="mini" @click="showEditRoleDialog(scope.row.id)">编辑</el-button>
               <el-button type="danger" icon="el-icon-delete" size="mini" @click="deleteRole(scope.row.id)">删除</el-button>

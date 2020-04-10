@@ -376,7 +376,7 @@ export default {
       }).catch(err => err)
       console.log(confirmResult)
       if (confirmResult !== 'confirm') {
-        return this.$message.error('已取消删除')
+        return this.$message.info('已取消删除')
       }
       const { data: res } = await this.axios.delete('users/' + userId)
       if (res.meta.status !== 200) {
